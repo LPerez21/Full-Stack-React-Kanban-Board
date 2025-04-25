@@ -5,37 +5,34 @@
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: #333333; /* dark text */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* webkit solution */
-::-webkit-input-placeholder { 
-  text-align:right; 
-}
-
-/* mozilla solution */
-input:-moz-placeholder { 
-  text-align:right; 
+/* placeholder */
+::placeholder {
+  text-align: right;
+  opacity: 0.6;
 }
 
 a {
   font-weight: 500;
-  color: #000000;
+  color: #0059B3;       /* blue link */
   text-decoration: inherit;
+  transition: color 0.2s;
 }
 a:hover {
-  color: #535bf2;
+  color: #003D80;       /* darker on hover */
 }
 
 body {
-  background: #ECF0F1;
+  background: #F9FAFB;  /* very light gray */
   background-size: cover;
-  background-repeat: no-repeat no-repeat;
-  background-position: center center;
+  background-repeat: no-repeat;
+  background-position: center;
   margin: 0;
   place-items: center;
   min-width: 320px;
@@ -54,12 +51,13 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #0059B3;  /* blue button */
+  color: #FFFFFF;              /* white text */
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border-color 0.25s, background-color 0.2s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #003D80;       /* darker border */
 }
 button:focus,
 button:focus-visible {
@@ -67,35 +65,30 @@ button:focus-visible {
 }
 
 main {
-  color: black;
+  color: #333333;   /* ensure dark body text */
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: row;
 }
 
+/* tables */
 tr {
   border-radius: 10px;
-  background-color: #000;
-  color: white;
+  background-color: #FFFFFF;  /* white rows */
+  color: #333333;             /* dark text */
 }
-
 tbody tr:nth-child(odd) {
-  background-color: #333333;
+  background-color: #F4F4F4;  /* light gray alternates */
 }
 
-/* Navbar Content */
+/* Navbar */
 .nav {
   display: flex;
   padding: 1em 2em;
+  background-color: #FFFFFF;  /* white bar */
+  border-bottom: 1px solid #E0E0E0;
 }
-
-.nav ul {
-  display: flex;
-  margin-left: auto;
-  flex-direction: row;
-}
-
 .nav-title {
   display: flex;
   align-items: center;
@@ -103,75 +96,73 @@ tbody tr:nth-child(odd) {
   font-size: larger;
   font-weight: 900;
 }
-
 .nav-title a {
-  color: #b864c4;
+  color: #0059B3;             /* accent title */
 }
-
-.nav-item {
-  display: block;
+.nav ul {
+  display: flex;
   margin-left: auto;
+}
+.nav-item {
   list-style: none;
+  margin-left: auto;
 }
-
 .nav-link {
-  color: #fff;
+  color: #333333;             /* dark nav links */
   text-decoration: none;
+  padding: 0.5em 1em;
+  transition: color 0.2s;
 }
-
+.nav-link:hover,
 .active {
-  font-weight: 700;
+  color: #0059B3;             /* active/highlight */
 }
 
+/* layout components */
 .table {
   width: 80vw;
   table-layout: fixed;
 }
-
 .board {
   width: 100%;
 }
-
 .board-display {
   display: flex;
 }
 
+/* swim lanes */
 .swim-lane {
   text-align: center;
   font-weight: 500;
   width: 33%;
-  height: 90vh; 
+  height: 90vh;
   border: 1px solid rgba(0, 0, 0, 0.2);
   margin: 5px;
   padding: 5px;
+  background-color: #F9FAFB; /* default pale */
 }
-
 .todo {
-  background-color: #e9cbec;
+  background-color: #E1EFFE; /* soft blue */
 }
-
 .inprogress {
-  background-color: #b864c4;
+  background-color: #CCE0F5; /* lighter blue */
 }
-
 .done {
-  background-color: #732381;
+  background-color: #99C2EB; /* mid-tone blue */
 }
 
 .ticket-card {
   text-align: left;
-  background-color: #fff;
+  background-color: #FFFFFF;  /* white card */
   padding: 15px;
   margin-bottom: 10px;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  border: 0.1em solid black;
+  border: 1px solid #CCCCCC;  /* light gray border */
 }
 
 .container {
-  /* margin: auto; */
   width: 100%;
-  /* height: 90%; */
 }
 
 #create-ticket-link {
@@ -179,60 +170,54 @@ tbody tr:nth-child(odd) {
   margin-left: auto;
 }
 
-
+/* form */
 .form {
   width: 60%;
   height: 80%;
-  background-color: #b864c4;
+  background-color: #FFFFFF;  /* white form */
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-.form > h1, .form > label {
-  color: yellow;
+.form > h1,
+.form > label {
+  color: #333333;             /* dark text */
 }
-
 .form > input {
   width: 200px;
-  
 }
-
 .form > label {
-  margin-top: 2.5%;
-  margin-bottom: 2.5%;
+  margin: 2.5% 0;
 }
-
 .form button {
   margin-top: 2.5%;
 }
-
 .form textarea {
   resize: both;
   min-height: 30px;
   min-width: 30px;
 }
 
+/* edit/delete buttons */
 .editBtn {
-  background-color: #f9f9f9;
+  background-color: #0059B3;  /* blue edit */
+  color: #FFFFFF;
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   cursor: pointer;
   transition: border-color 0.25s;
 }
-
 .deleteBtn {
-  background-color: #f9f9f9;
+  background-color: transparent;
   font-weight: 500;
-  color: black;
+  color: #0059B3;             /* blue delete */
   text-decoration: inherit;
 }
-
 .deleteBtn:hover {
-  color: #535bf2;
+  color: #003D80;             /* darker on hover */
 }
 
 .login-notice {
@@ -242,16 +227,16 @@ tbody tr:nth-child(odd) {
   justify-content: center;
 }
 
-
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: #003D80;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #F9FAFB;
+    color: #333333;
   }
 }

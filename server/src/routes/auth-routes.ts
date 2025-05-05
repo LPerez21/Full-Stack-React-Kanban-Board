@@ -42,7 +42,7 @@ router.post('/login', async (req: Request, res: Response) => {
       user: {
         id: user.id,
         username: user.username,
-        email: user.email, // Optional: include email if needed
+        //        email: user.email, // Optional: include email if needed
       },
     });
   } catch (error) {

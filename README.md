@@ -12,14 +12,6 @@ This Kanban Board Application is built to help agile team members securely manag
 * Task management with tasks sorted into columns: To-Do, In Progress, and Done.
 * Session management including logout and automatic JWT expiry.
 
-## User Story
-
-```
-AS A member of an agile team
-I WANT a Kanban board with a secure login page
-SO THAT I can securely access and manage my work tasks
-```
-
 ## Acceptance Criteria
 
 * Login page with form inputs for username and password.

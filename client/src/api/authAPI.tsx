@@ -31,9 +31,14 @@ const login = async (userInfo: UserLogin): Promise<LoginResponse> => {
     localStorage.setItem('user', JSON.stringify(data.user));
 
     return data;
-  } catch (err: any) {
-    console.error('Login error:', err.message || err);
-    return Promise.reject(err.message || 'Could not fetch user info');
+  } catch (err: unknown) {
+    if (err instanceof Error) {
+      console.error('Login error:', err.message);
+      return Promise.reject(err.message || 'Could not fetch user info');
+    } else {
+      console.error('Login error:', err);
+      return Promise.reject('Could not fetch user info');
+    }
   }
 };
 

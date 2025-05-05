@@ -91,7 +91,7 @@ npm run dev
 
 Deployed on Render:
 
-* **Live URL:** [Your Render URL](https://your-render-url.com)
+* **Live URL:** [Your Render URL](https://full-stack-react-kanban-board-2qh3.onrender.com)
 
 ## Screenshots
 
@@ -119,8 +119,8 @@ MIT License
 
 ---
 
-**GitHub Repository:** [Repository Link](https://github.com/your-username/kanban-board)
+**GitHub Repository:** [Repository Link](https://github.com/LPerez21/Full-Stack-React-Kanban-Board)
 
-**Deployed Application:** [Live URL](https://your-render-url.com)
+**Deployed Application:** [Live URL](https://full-stack-react-kanban-board-2qh3.onrender.com)
 
 ---
